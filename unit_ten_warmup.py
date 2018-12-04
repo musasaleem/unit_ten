@@ -1,9 +1,14 @@
 import pygame, sys
 from pygame.locals import *
+import logo
+
 
 pygame.init()
-mainSurface = pygame.display.set_mode((500, 500), 0, 32)
+mainSurface = pygame.display.set_mode((500, 250), 0, 32)
 pygame.display.set_caption("Pygame Test Window")
+
+ssfs = logo.Logo(mainSurface)
+ssfs.draw_rectangles()
 
 while True:
     for event in pygame.event.get():
