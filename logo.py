@@ -13,3 +13,12 @@ class Logo:
         pygame.draw.rect(self.main_surface, self.GREEN, (10, 10, 390, 190), 0)
         pygame.display.update()
 
+    def draw_words(self):
+        myFont = pygame.font.SysFont("Helvetica", 22)
+        my_other_Font = pygame.font.SysFont("Helvetica", 18)
+        school = myFont.render("SANDY SPRING FRIENDS SCHOOL", 1, self.WHITE)
+        motto = my_other_Font.render("Let Your Lives Speak", 1, self.WHITE)
+        self.main_surface.blit(school, (75, 120))
+        self.main_surface.blit(motto, (135, 150))
+        pygame.display.update()
+
